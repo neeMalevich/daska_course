@@ -15,7 +15,7 @@
     .s-block {
         margin: 4rem 0 8.025rem;
     }
-    
+
     .section-title{
         font-size: 3.6rem;
         margin: 0 0 4rem 0;
@@ -66,8 +66,8 @@
     .about__box-imges{
         display: none;
     }
-    .about__imges--mobile{
-        display: block;
+    .about__inner{
+        align-items: center;
     }
 
 }
