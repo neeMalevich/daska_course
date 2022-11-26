@@ -67,6 +67,9 @@
         display: none;
     }
     .preview__inner .preview__content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         width: 100%;
     }
 }
