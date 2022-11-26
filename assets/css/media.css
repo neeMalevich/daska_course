@@ -23,7 +23,6 @@
     }
     .preview__content,
     .preview__img{
-        width: 50%;
         padding-right: 0;
     }
     .preview__img img{

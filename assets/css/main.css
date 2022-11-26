@@ -115,10 +115,11 @@ body {
     align-items: center;
     justify-content: space-between;
     height: calc(100% - 5.9rem);
-    margin-left: 5rem;
+    margin-left: 4.2rem;
 }
 .preview__content{
-    margin-bottom: 4.375rem;
+    margin-bottom: 2.775rem;
+    width: 50%;
 }
 
 .preview__title{
@@ -131,7 +132,7 @@ body {
     margin: 0;
     color: #fcfcfc;
     padding-left: 1px;
-    margin-bottom: 1.563rem;
+    margin-bottom: 1.263rem;
 }
 .preview__title span{
     margin-left: 3.75rem;
