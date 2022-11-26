@@ -339,6 +339,9 @@ body {
  
 .stages{
     position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2.6rem;
     z-index: 1;
 }
 .stages::before{
@@ -384,13 +387,15 @@ body {
 }
 .stages__title{
     font-family: Montserrat;
-    font-size: 3.2em;
+    font-size: 3.4em;
+    line-height: 1.2;
     color: #595757;
     font-weight: lighter;
     margin: 0;
     position: relative;
     z-index: 1;
     text-align: center;
+    white-space: nowrap;
 }
 
 .stages__title span{
@@ -407,7 +412,7 @@ body {
     border: 2px solid #000000;
     background-color: #fcfcfc;
     border-radius: 40px;
-    padding: 1.9rem 4.2rem;
+    padding: 1.6rem 1.9rem 1.7rem 4.2rem;
 }
 
 .stages__box p {
@@ -432,14 +437,27 @@ body {
 .stages-item:nth-child(even) .stages__content{
     margin-left: 0;
 }
-    
-.stages-item:nth-child(3n + 2) .stages__box,
-.stages-item:nth-child(3n + 3) .stages__box {
-    padding: 3rem 2.3rem;
+
+.stages-item:nth-child(3n + 1) .stages__title{
+    padding-right: 12.3rem;
+}
+.stages-item:nth-child(3n + 2) .stages__title{
+    padding-right: 9rem;
+}
+.stages-item:nth-child(3n + 3) .stages__title{
+    padding-right: 5rem;
+}
+
+.stages-item:nth-child(3n + 2) .stages__box {
+    padding: 3rem 0rem 3rem 1.2rem;
+}
+.stages-item:nth-child(3n + 3) .stages__box{
+    padding: 2.7rem 0rem 3rem 2.7rem;
 }
 .stages-item:nth-child(3n + 2) .stages__content,
 .stages-item:nth-child(3n + 3) .stages__content{
     margin-bottom: 0;
+    margin-top: 1rem;
 }
 
 
@@ -447,19 +465,21 @@ body {
     margin-bottom: 3rem;
 }
 .services__inner{
-    max-width: 70rem;
+    max-width: 1120px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 5rem;
+    padding-left: 2rem;
+    padding-bottom: 2rem;
     column-gap: 11rem;
 }
 .services__item{
     border: 2px solid #9b9696;
-    width: 26.25rem;
+    width: 420px;
     padding: 2rem 3rem;
-    height: 15.3rem;
+    height: 245px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -515,9 +535,14 @@ body {
     color: #606060;
     font-size: 2.2rem;
     text-align: center;
-    padding-bottom: 1rem;
+    width: 100%;
+    padding-bottom: 0.6rem;
     border-bottom: 2px solid #9b9696;
-    margin-bottom: 3.5rem;
+    margin-bottom: 2.7rem;
+}
+.services__title span{
+    display: flex;
+    justify-content: center;
 }
 
 .review .section-title{
@@ -528,21 +553,23 @@ body {
 }
 .review__item{
     position: relative;
-    margin-top: 5rem;
+    margin-top: 4.6rem;
     border: 1px solid #606060;
     display: flex;
+    height: 251px;
     flex-direction: column;
     align-items: center;
-    padding: 6.375rem 1rem 2.375rem;
+    justify-content: space-between;
+    padding: 93px 20px 20px;
 }
 .review__img{
     position: absolute;
-    top: calc(-9.6rem/2);
+    top: calc(-150px/2);
     /* transform: translateY(calc(-155px/2)); */
 }
 .review__img img{
-    width: 9.6rem;
-    height: 9.6rem;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     object-fit: cover;
 }
@@ -552,9 +579,9 @@ body {
     letter-spacing: -0.9px;
     color: #606060;
     font-size: 1.8rem;
+    line-height: 1.3;
     text-align: center;
     margin: 0;
-    margin-bottom: 2.5rem;
 }
 .review__author{
     font-family: Montserrat;
@@ -563,15 +590,19 @@ body {
     letter-spacing: -3px;
     text-align: right;
     display: block;
-    width: 95%;
+    width: 82%;
+    padding-bottom: 17px;
 }
 .review__slider {
-    width: 90%;
-    height: 34.6rem;
+    width: 94%;
+    height: auto;
+    padding-bottom: 6.4rem;
+    margin-top: 1rem;
+    /* height: 34.6rem; */
 }
 .swiper-pagination-bullet {
-    width: 1.875rem;
-    height: 1.875rem;
+    width: 30px;
+    height: 30px;
     background: #5f5454;
 }
 .swiper-pagination-bullet.swiper-pagination-bullet-active {
@@ -586,8 +617,8 @@ body {
     margin: 0;
     border: none;
     background-color: transparent;
-    width: 4.125rem;
-    height: 4.125rem;
+    width: 66px;
+    height: 66px;
     border: 1px solid #606060;
     outline: none;
     border-radius: 50%;
@@ -596,7 +627,7 @@ body {
     align-items: center;
     cursor: pointer;
     position: absolute;
-    top: calc(34.6rem/2 - 2rem);
+    top: calc(555px/2 - 47px);
 }
 .slider-arrow-prev img,
 .slider-arrow-next img{
@@ -608,15 +639,15 @@ body {
 }
 
 .slider-arrow-prev{
-    right: -3.125rem;
+    right: -2.825rem;
 }
 .slider-arrow-next{
-    left: -3.125rem;
+    left: -2.425rem;
 }
 .swiper-navigation {
     display: flex;
     justify-content: space-between;
-    width: 34.6rem;
+    width: 555px;
     margin: 0 auto;
 }
 
