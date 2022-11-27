@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     slidesPerView: 1,
                     spaceBetween: 15,
                 },
-                1150: {
+                1300: {
                     slidesPerView: 2,
                     spaceBetween: 60,
                 },
@@ -83,6 +83,10 @@ document.addEventListener("DOMContentLoaded", () => {
             keyboard: true,
         });
     }
+
+    AOS.init({
+        
+      });
 
     mobileMenu();
     tab();

@@ -8,6 +8,20 @@
     src: url("../fonts/Philosopher/Philosopher-Regular.ttf")
 }
 
+body::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: #afafaf;
+  border-radius: 5px;
+  outline: none;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
@@ -194,6 +208,7 @@ body {
     width: 85px;
     height: 10px;
     z-index: -1;
+    transition: all 0.15s linear;
     background-repeat: no-repeat;
     background-size: contain;
 }
@@ -312,7 +327,13 @@ body {
     letter-spacing: -2px;
     position: relative;
     padding-bottom: 1rem;
+    outline: none;
+    background-color: transparent;
     cursor: pointer;
+}
+.tabs-work:focus{
+    outline: none;
+    background-color: transparent;
 }
 .tabs-work._is-active{
     border-bottom: 1px solid #000;
@@ -496,8 +517,8 @@ body {
     border: 1px solid #000000;
     cursor: pointer;
     position: relative;
-    height: 3.75rem;
-    line-height: 3.75rem;
+    height: 60px;
+    line-height: 60px;
     transform-style: preserve-3d;
     padding: 0 3.125rem;
     text-decoration: none;
@@ -527,6 +548,7 @@ body {
     width: 100px;
     height: 15px;
     z-index: -1;
+    transition: all 0.15s linear;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -550,6 +572,7 @@ body {
 }
 .review__inner{
     position: relative;
+    padding-bottom: 1.4rem;
 }
 .review__item{
     position: relative;
@@ -628,6 +651,8 @@ body {
     cursor: pointer;
     position: absolute;
     top: calc(555px/2 - 47px);
+    background-color: #fff;
+    z-index: 1;
 }
 .slider-arrow-prev img,
 .slider-arrow-next img{
@@ -639,7 +664,7 @@ body {
 }
 
 .slider-arrow-prev{
-    right: -2.825rem;
+    right: -2.525rem;
 }
 .slider-arrow-next{
     left: -2.425rem;
@@ -651,9 +676,13 @@ body {
     margin: 0 auto;
 }
 
+.contacts .section-title{
+    margin-bottom: 3rem;
+}
+
 .contacts__inner {
     display: flex;
-    width: 90%;
+    width: 92%;
     margin: 0 auto;
 }
 .contacts__box {
@@ -669,7 +698,7 @@ body {
 }
 .contacts__suptitle {
     font-family: Montserrat;
-    font-size: 2rem;
+    font-size: 1.9rem;
     color: #5957579e;
     font-weight: lighter;
     margin: 0;
@@ -680,11 +709,11 @@ body {
     background-color: #f3f1eb;
     display: flex;
     flex-direction: column;
-    padding: 3.125rem 5rem;
+    padding: 2.325rem 5rem;
+    height: 435px;
     z-index: 1;
-    max-width: 660px;
     /* width: calc(63.5% + 80px); */
-    width: 100%;
+    width: calc(100% - 85px);
 }
 .form-box {
     display: flex;
@@ -704,6 +733,12 @@ body {
     background-color: transparent;
     outline: none;
 }
+
+.form-input:focus,
+.form-textarea:focus {
+    border-color:#479347;
+}
+
 .form-textarea{
     font-family: Montserrat;
     font-size: 1.2rem;
@@ -756,20 +791,25 @@ body {
     width: 85px;
     height: 10px;
     z-index: -1;
+    transition: all 0.15s linear;
     background-repeat: no-repeat;
     background-size: contain;
 }
 .contacts__img {
     z-index: -1;
-    width: 535px;
-    height: 45rem;
+    width: 570px;
+    height: 698px;
+    margin-right: 2.6rem;
+    padding-top: 1.6rem;
 }
 
 .contacts__img img {
     display: block;
-    max-width: 100%;
+    width: 100%;
     height: 100%;
 }
+
+
 
 .mobile {
     background: #606060;
@@ -847,3 +887,10 @@ body {
       transform: rotate(360deg) translateZ(-1px);
     }
 }
+
+.preview__btn:hover::after,
+.services__btn:hover::after,
+.contacts__btn:hover::after{
+    right: -81px;
+}
+
